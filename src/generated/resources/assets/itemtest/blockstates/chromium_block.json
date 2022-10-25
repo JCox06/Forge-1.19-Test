@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "itemtest:block/chromium_block"
+    }
+  }
+}

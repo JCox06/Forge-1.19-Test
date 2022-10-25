@@ -1,0 +1,10 @@
+{
+  "item.itemtest.raw_chromium": "Raw Chromium Fragment",
+  "item.itemtest.chromium_ingot": "Chromium Ingot",
+
+  "block.itemtest.chromium_ore_nether": "Chromium Ore",
+  "block.itemtest.chromium_ore_overworld": "Chromium Ore",
+  "block.itemtest.chromium_block": "Block of Chromium",
+
+  "itemGroup.itemtest": "Item Test Tab"
+}

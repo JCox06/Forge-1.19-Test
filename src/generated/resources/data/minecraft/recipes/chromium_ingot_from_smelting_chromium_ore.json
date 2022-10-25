@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 100,
+  "experience": 2.0,
+  "ingredient": {
+    "tag": "itemtest:chromium_ore_item"
+  },
+  "result": "itemtest:chromium_ingot"
+}
