@@ -5,6 +5,10 @@
   "block.itemtest.chromium_ore_nether": "Chromium Ore",
   "block.itemtest.chromium_ore_overworld": "Chromium Ore",
   "block.itemtest.chromium_block": "Block of Chromium",
+  "block.itemtest.tradingbox": "Trading Box",
 
-  "itemGroup.itemtest": "Item Test Tab"
+  "itemGroup.itemtest": "Item Test Tab",
+
+  "tooltip.tradingbox": "When you give the box an item, it will give you one back",
+  "screen.tradingbox": "Trading Box GUI"
 }

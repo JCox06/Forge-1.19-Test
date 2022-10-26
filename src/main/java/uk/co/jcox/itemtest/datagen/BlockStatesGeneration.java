@@ -18,5 +18,6 @@ public class BlockStatesGeneration extends BlockStateProvider {
         simpleBlock(Registration.CHROMIUM_ORE_OVERWORLD.get());
         simpleBlock(Registration.CHROMIUM_ORE_NETHER.get());
         simpleBlock(Registration.CHROMIUM_BLOCK.get());
+        simpleBlock(Registration.TRADINGBOX_BLOCK.get());
     }
 }

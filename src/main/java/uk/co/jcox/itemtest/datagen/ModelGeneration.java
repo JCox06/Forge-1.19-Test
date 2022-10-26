@@ -19,6 +19,7 @@ public class ModelGeneration extends ItemModelProvider {
         withExistingParent(Registration.CHROMIUM_ORE_OVERWORLD_ITEM.getId().getPath(), modLoc("block/chromium_ore_overworld"));
         withExistingParent(Registration.CHROMIUM_ORE_NETHER_ITEM.getId().getPath(), modLoc("block/chromium_ore_nether"));
         withExistingParent(Registration.CHROMIUM_BLOCK.getId().getPath(), modLoc("block/chromium_block"));
+        withExistingParent(Registration.TRADINGBOX_ITEM.getId().getPath(), modLoc("block/tradingbox"));
 
         //Items
         singleTexture(Registration.CHROMIUM_INGOT.getId().getPath(), mcLoc("item/generated"),
