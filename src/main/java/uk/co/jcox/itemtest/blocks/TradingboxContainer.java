@@ -3,10 +3,7 @@ package uk.co.jcox.itemtest.blocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -51,8 +48,8 @@ public class TradingboxContainer extends AbstractContainerMenu {
         int cols = slots / slotsPerCol;
 
         //Inventory
-        for(int i = 0; i < cols; i++) {
-            for(int j = 0; j < slotsPerCol; j++) {
+        for(int i = 0; i < cols; i++) { //Horizontal (Rows)
+            for(int j = 0; j < slotsPerCol; j++) { //Vertical (Columns)
                 addSlot(new SlotItemHandler(handler, invIndex, x, y));
                 x += changeInX;
                 invIndex++;
@@ -62,7 +59,7 @@ public class TradingboxContainer extends AbstractContainerMenu {
         }
 
         //Hotbar
-        int hotbarEndIndex = 8;
+        int hotbarEndIndex = 9;
         for(int i = 0; i < hotbarEndIndex; i++) {
             addSlot(new SlotItemHandler(handler, i, startingX, y));
             startingX += changeInX;
@@ -71,7 +68,24 @@ public class TradingboxContainer extends AbstractContainerMenu {
 
     @Override
     public ItemStack quickMoveStack(Player player, int index) {
-        //todo needs implementing
+        //Hotbar slots start from 2 - 11
+        //Inventory Slots start from 12 - 29
+
+        //Check if the player has clicked on an item stack
+        Slot slot = this.slots.get(index);
+        if(slot != null && slot.hasItem()) {
+            ItemStack stack = slot.getItem();
+
+            //Check if the player has clicked on the output or input block
+            if(index == 0 || index == 1) {
+                this.moveItemStackTo(stack, 2, 38, true);
+            } else {
+                this.moveItemStackTo(stack, 0, 1, true);
+            }
+
+            return ItemStack.EMPTY;
+        }
+
         return null;
     }
 

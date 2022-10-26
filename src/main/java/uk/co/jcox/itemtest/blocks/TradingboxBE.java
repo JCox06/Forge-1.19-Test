@@ -69,7 +69,8 @@ public class TradingboxBE extends BlockEntity {
                   return true;
               }
 
-              return false;
+              //todo need to setup two different capapabiltiies to allow the output slot to now be takable by the player
+              return true;
           }
         };
     }
