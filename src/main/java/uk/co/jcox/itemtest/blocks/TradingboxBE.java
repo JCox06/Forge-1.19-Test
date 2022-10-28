@@ -58,20 +58,20 @@ public class TradingboxBE extends BlockEntity {
 
     private ItemStackHandler createHandler() {
         return new ItemStackHandler(2) {
-          @Override
-          protected void onContentsChanged(int slot) {
-              setChanged();
-          }
+            @Override
+            protected void onContentsChanged(int slot) {
+                setChanged();
+            }
 
-          @Override
+            @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-              if(INPUT_SLOT == slot) {
-                  return true;
-              }
+                if(INPUT_SLOT == slot) {
+                    return true;
+                }
 
-              //todo need to setup two different capapabiltiies to allow the output slot to now be takable by the player
-              return true;
-          }
+                //todo need to setup two different capapabiltiies to allow the output slot to now be takable by the player
+                return true;
+            }
         };
     }
 

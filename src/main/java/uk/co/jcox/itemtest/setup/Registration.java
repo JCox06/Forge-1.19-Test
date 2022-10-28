@@ -66,6 +66,8 @@ public class Registration {
     public static final RegistryObject<Item> CHROMIUM_BLOCK_ITEM = fromBlock(CHROMIUM_BLOCK);
 
 //BLOCK ENTITIES
+
+    //TradingBoxBlock
     public static final RegistryObject<TradingboxBlock> TRADINGBOX_BLOCK = BLOCKS.register("tradingbox",() -> new TradingboxBlock());
     public static final RegistryObject<Item> TRADINGBOX_ITEM = fromBlock(TRADINGBOX_BLOCK);
     public static final RegistryObject<BlockEntityType<TradingboxBE>> TRADINGBOX_BE = BLOCK_ENTITIES.register("tradingbox", () ->
