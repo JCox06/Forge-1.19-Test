@@ -1,12 +1,18 @@
 package uk.co.jcox.itemtest.setup;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -17,9 +23,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import uk.co.jcox.itemtest.blocks.TradingboxBlock;
-import uk.co.jcox.itemtest.blocks.TradingboxBE;
-import uk.co.jcox.itemtest.blocks.TradingboxContainer;
+import org.jetbrains.annotations.Nullable;
+import uk.co.jcox.itemtest.blocks.*;
+
+import java.util.List;
 
 import static uk.co.jcox.itemtest.ItemTest.MODID;
 
@@ -75,7 +82,21 @@ public class Registration {
     public static final RegistryObject<MenuType<TradingboxContainer>> TRADINGBOX_CONTAINER = CONTAINERS.register("tradingbox", () ->
             IForgeMenuType.create((windowId, inv, data) -> new TradingboxContainer(windowId, data.readBlockPos(), inv, inv.player)));
 
+    //MineralEnergyExtractor
+    public static final RegistryObject<Block> MINERAL_EXTRACTOR_BLOCK = BLOCKS.register("mineral_energy_extractor", MineralEnergyExtractorBlock::new);
+    public static final RegistryObject<Item> MINERAL_EXTRACTOR_ITEM = fromBlock(MINERAL_EXTRACTOR_BLOCK);
+    public static final RegistryObject<BlockEntityType<MineralEnergyExtractorBE>> MINERAL_EXTRACTOR_BE = BLOCK_ENTITIES.register("mineral_energy_extractor", () ->
+        BlockEntityType.Builder.of(MineralEnergyExtractorBE::new, MINERAL_EXTRACTOR_BLOCK.get()).build(null));
+    public static final RegistryObject<MenuType<MineralEnergyExtractorContainer>> MINERAL_EXTRACTOR_CONTAINER = CONTAINERS.register("mineral_energy_extractor", () ->
+            IForgeMenuType.create((windowId,inv, data) -> new MineralEnergyExtractorContainer(windowId, data.readBlockPos(), inv, inv.player)));
+
 //Items
     public static RegistryObject<Item> CHROMIUM_INGOT = ITEMS.register("chromium_ingot", () -> new Item(ITEM_PROPERTIES));
     public static RegistryObject<Item> RAW_CHROMIUM = ITEMS.register("raw_chromium", () -> new Item(ITEM_PROPERTIES));
+    public static RegistryObject<Item> STRANGE_MINERAL = ITEMS.register("strange_mineral", () -> new Item(ITEM_PROPERTIES));
+    public static RegistryObject<Item> METAL_MINERAL_COMPUND = ITEMS.register("metal_mineral_compound", () -> new Item(ITEM_PROPERTIES) {
+        public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
+            list.add(Component.translatable("tooltip.metal_mineral"));
+        }
+    });
 }

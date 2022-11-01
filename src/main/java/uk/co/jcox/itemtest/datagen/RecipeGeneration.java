@@ -2,6 +2,7 @@ package uk.co.jcox.itemtest.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.registries.RegistryObject;
 import uk.co.jcox.itemtest.setup.Registration;
@@ -17,11 +18,13 @@ public class RecipeGeneration extends RecipeProvider {
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.CHROMIUM_ORE_ITEM), Registration.CHROMIUM_INGOT.get(), 2.0f, 100)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.CHROMIUM_ORE_ITEM),
+                        Registration.CHROMIUM_INGOT.get(), 2.0f, 100)
                 .unlockedBy("has_ore", has(Registration.CHROMIUM_ORE_ITEM))
-                        .save(consumer, "chromium_ingot_from_smelting_chromium_ore");
+                .save(consumer, "chromium_ingot_from_smelting_chromium_ore");
 
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.RAW_CHROMIUM.get()), Registration.CHROMIUM_INGOT.get(), 2.0f, 100)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.RAW_CHROMIUM.get()),
+                        Registration.CHROMIUM_INGOT.get(), 2.0f, 100)
                 .unlockedBy("has_ore", has(Registration.CHROMIUM_ORE_ITEM))
                 .save(consumer, "chromium_ingot_from_smelting_raw_chromium");
 
@@ -31,6 +34,18 @@ public class RecipeGeneration extends RecipeProvider {
                 .pattern("###")
                 .define('#', Registration.CHROMIUM_INGOT.get())
                 .unlockedBy("has_item", has(Registration.CHROMIUM_INGOT.get()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Registration.METAL_MINERAL_COMPUND.get())
+                .pattern("#x#")
+                .pattern("zyz")
+                .pattern("ttt")
+                .define('#', Items.DIAMOND)
+                .define('x', Registration.CHROMIUM_BLOCK.get())
+                .define('z', Items.ENDER_EYE)
+                .define('y', Registration.STRANGE_MINERAL.get())
+                .define('t', Items.OBSIDIAN)
+                .unlockedBy("has_item", has(Registration.STRANGE_MINERAL.get()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Registration.CHROMIUM_INGOT.get(), 9)

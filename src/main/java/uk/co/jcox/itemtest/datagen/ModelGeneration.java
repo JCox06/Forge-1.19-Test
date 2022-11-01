@@ -3,6 +3,7 @@ package uk.co.jcox.itemtest.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 import uk.co.jcox.itemtest.setup.Registration;
 
 import static uk.co.jcox.itemtest.ItemTest.MODID;
@@ -27,6 +28,12 @@ public class ModelGeneration extends ItemModelProvider {
 
         singleTexture(Registration.RAW_CHROMIUM.getId().getPath(), mcLoc("item/generated"),
                 "layer0", modLoc("item/raw_chromium"));
+
+        singleTexture(Registration.STRANGE_MINERAL.getId().getPath(), mcLoc("item/generated"),
+                "layer0", modLoc("item/strange_mineral"));
+
+        singleTexture(Registration.METAL_MINERAL_COMPUND.getId().getPath(), mcLoc("item/generated"),
+                "layer0", modLoc("item/metal_mineral_compound"));
 
     }
 }

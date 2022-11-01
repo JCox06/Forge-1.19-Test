@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "itemtest:item/metal_mineral_compound"
+  }
+}

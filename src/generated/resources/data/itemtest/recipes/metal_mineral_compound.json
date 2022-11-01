@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "t": {
+      "item": "minecraft:obsidian"
+    },
+    "x": {
+      "item": "itemtest:chromium_block"
+    },
+    "y": {
+      "item": "itemtest:strange_mineral"
+    },
+    "z": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    "#x#",
+    "zyz",
+    "ttt"
+  ],
+  "result": {
+    "item": "itemtest:metal_mineral_compound"
+  }
+}

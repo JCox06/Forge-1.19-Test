@@ -1,6 +1,8 @@
 {
   "item.itemtest.raw_chromium": "Raw Chromium Fragment",
   "item.itemtest.chromium_ingot": "Chromium Ingot",
+  "item.itemtest.strange_mineral": "Strange Mineral",
+  "item.itemtest.metal_mineral_compound": "Mineral Metal Compound",
 
   "block.itemtest.chromium_ore_nether": "Chromium Ore",
   "block.itemtest.chromium_ore_overworld": "Chromium Ore",
@@ -10,5 +12,6 @@
   "itemGroup.itemtest": "Item Test Tab",
 
   "tooltip.tradingbox": "When you give the box an item, it will give you one back",
+  "tooltip.metal_mineral": "A high unstable mineral containing large amounts of energy",
   "screen.tradingbox": "Trading Box GUI"
 }
