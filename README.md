@@ -6,6 +6,6 @@ The main mod class is called ItemTest.java (now looking back, probably not the b
 
 All data generation is done apart from lang (because I find it easier to manually write the JSON file) and loot tables (I have not got round to implementing data generation for loot tables)
 
-I used the Forge Forums and mainly Jorrit Tyberghein (Youtube) for help using forge.
+I used the Forge Forums and mainly Jorrit Tyberghein (Youtube) for help using forge
 
 Thanks!

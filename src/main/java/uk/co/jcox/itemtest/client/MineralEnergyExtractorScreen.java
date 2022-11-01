@@ -28,7 +28,6 @@ public class MineralEnergyExtractorScreen extends AbstractContainerScreen<Minera
 
     @Override
     protected void renderLabels(PoseStack matrixStack, int mouseX, int mouseY) {
-        System.out.println("Calling menu.getEnergy()");
         drawString(matrixStack, Minecraft.getInstance().font, "Energy: " + menu.getEnergy(), 10, 10, 0xffffff);
     }
 

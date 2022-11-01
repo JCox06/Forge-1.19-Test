@@ -31,9 +31,11 @@ import uk.co.jcox.itemtest.varia.CustomEnergyStorage;
 
 import java.util.Random;
 
+import static uk.co.jcox.itemtest.ItemTest.MODID;
+
 public class MineralEnergyExtractorBE extends BlockEntity implements MenuProvider {
 
-    private static final String SCREEN = "screen.mineral_energy_extractor";
+    private static final String SCREEN = "screen." + MODID + ".mineral_energy_extractor";
 
     private static final int ENERGY_CAPACITY = 80000; //Maximum Energy Capacity
     private static final int ENERGY_GENERATION = 150; //Energy released per tick

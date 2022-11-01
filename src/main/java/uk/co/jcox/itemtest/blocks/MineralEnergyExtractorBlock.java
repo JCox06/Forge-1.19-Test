@@ -37,9 +37,11 @@ import org.w3c.dom.Entity;
 import java.awt.*;
 import java.util.List;
 
+import static uk.co.jcox.itemtest.ItemTest.MODID;
+
 public class MineralEnergyExtractorBlock extends Block implements EntityBlock {
 
-    private static final String TOOLTIP = "tooltip.mineral_energy_extractor";
+    private static final String TOOLTIP = "tooltip." + MODID + ".mineral_energy_extractor";
     private static final VoxelShape RENDER_SHAPE = Shapes.box(0.1, 0.1, 0.1, 0.9, 0.9, 0.9);
 
     public MineralEnergyExtractorBlock() {

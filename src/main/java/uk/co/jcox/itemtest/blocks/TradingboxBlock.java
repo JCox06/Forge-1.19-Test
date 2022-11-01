@@ -35,11 +35,13 @@ import oshi.hardware.platform.unix.openbsd.OpenBsdPowerSource;
 
 import java.util.List;
 
+import static uk.co.jcox.itemtest.ItemTest.MODID;
+
 public class TradingboxBlock extends Block implements EntityBlock {
 
 
-    private static final String TRADINGBOX_TOOLTIP = "tooltip.tradingbox";
-    private static final String TRADINGBOX_DISPLAYNAME = "screen.tradingbox";
+    private static final String TRADINGBOX_TOOLTIP = "tooltip." + MODID + ".tradingbox";
+    private static final String TRADINGBOX_DISPLAYNAME = "screen." + MODID + ".tradingbox";
 
     public TradingboxBlock() {
         super(Properties.of(

@@ -96,7 +96,7 @@ public class Registration {
     public static RegistryObject<Item> STRANGE_MINERAL = ITEMS.register("strange_mineral", () -> new Item(ITEM_PROPERTIES));
     public static RegistryObject<Item> METAL_MINERAL_COMPUND = ITEMS.register("metal_mineral_compound", () -> new Item(ITEM_PROPERTIES) {
         public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
-            list.add(Component.translatable("tooltip.metal_mineral"));
+            list.add(Component.translatable("tooltip." + MODID + ".metal_mineral"));
         }
     });
 }

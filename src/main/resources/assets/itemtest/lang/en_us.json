@@ -8,10 +8,13 @@
   "block.itemtest.chromium_ore_overworld": "Chromium Ore",
   "block.itemtest.chromium_block": "Block of Chromium",
   "block.itemtest.tradingbox": "Trading Box",
+  "block.itemtest.mineral_energy_extractor": "Mineral Energy Extractor",
 
   "itemGroup.itemtest": "Item Test Tab",
 
-  "tooltip.tradingbox": "When you give the box an item, it will give you one back",
-  "tooltip.metal_mineral": "A high unstable mineral containing large amounts of energy",
-  "screen.tradingbox": "Trading Box GUI"
+  "screen.itemtest.mineral_energy_extractor": "Mineral Energy Extractor",
+  "screen.tradingbox": "Trading Box GUI",
+  "tooltip.itemtest.tradingbox": "When you give the box an item, it will give you one back",
+  "tooltip.itemtest.metal_mineral": "A high unstable mineral containing large amounts of energy",
+  "tooltip.itemtest.mineral_energy_extractor": "Extract energy from an unstable metal mineral"
 }
